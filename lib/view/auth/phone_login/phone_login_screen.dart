@@ -398,8 +398,8 @@ class _SignInScreenState extends State<SignInScreen> {
     _auth.verifyPhoneNumber(
         phoneNumber: mobile,
         timeout: Duration(seconds: 60),
-      verificationFailed: ( authException){
-        print('WE are here in code sent verificationFailed');
+      verificationFailed: ( authException) {
+        print('WE are here in code sent verificationFailed $authException');
 
         setState(() {
           isLoadingDialog = false;

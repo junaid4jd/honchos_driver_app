@@ -3,6 +3,7 @@ import 'package:honchos_driver_app/view/chooseRestaurant/choose_restaurant_scree
 import 'package:honchos_driver_app/view/dashboard/dashboard_screen.dart';
 import 'package:honchos_driver_app/view/enableLocation/enable_location_screen.dart';
 import 'package:honchos_driver_app/view/home/home_screen.dart';
+import 'package:honchos_driver_app/view/payment/payfast_screen.dart';
 import 'package:honchos_driver_app/view/splash/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   String? phone, email, uid, userType;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -43,12 +45,11 @@ class _MyAppState extends State<MyApp> {
 
     super.initState();
   }
+
   getUserData() async {
+
     SharedPreferences prefs = await SharedPreferences.getInstance();
-
-
-
-    if(prefs.getString('userPhone') != null && prefs.getString('userEmail') != null) {
+    if( prefs.getString('userEmail') != null) {
 
       setState(() {
         phone = prefs.getString('userPhone');
@@ -102,8 +103,7 @@ class _MyAppState extends State<MyApp> {
         // is not restarted.
         // primarySwatch: darkRedColor,
       ),
-      home:
-      phone != '' && email != '' ? DriverHomeScreen() :
+      home: email != '' ? DriverHomeScreen() :
       SplashScreen(),
     );
   }

@@ -66,6 +66,8 @@ dependencies:
   credit_card_validator: ^2.1.0
   email_validator: ^2.1.17
   geolocator: ^9.0.2
+  geocode: ^1.0.3
+  webview_flutter: ^4.2.2
   geocoding: ^2.1.0
   shimmer: ^2.0.0
   image_picker: ^0.8.7
