@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const String cookie = 'lAWZuI4Vn6KfRjlH5n9qT3NZVj6LFsRHqtKDDGoj';
+const String cookie = 'cRNuZ1PlfA0AWP2Yny33mhrmFagxx4om0fclyuxI';
 // AIzaSyDT2jOXq4VDp9DluoLKbX5d_loZSKwr5V0
 const String googleMapKey = "AIzaSyDT2jOXq4VDp9DluoLKbX5d_loZSKwr5V0";
 // AIzaSyBAjePmdqb4OLKiXkOiMv9ImMCw-riRek4 Jsol key

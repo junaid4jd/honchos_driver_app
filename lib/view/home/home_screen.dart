@@ -46,8 +46,14 @@ class _DriverHomeScreenState extends State<DriverHomeScreen> {
 
 
   getOrders() async {
+    // var headers = {
+    //   'Cookie': 'restaurant_session=NUZ9J67CmsrRkWPqW765evDXDBCttdgnKtygvzSR'
+    // };
+    // var request = http.Request('GET', Uri.parse('http://restaurant.wettlanoneinc.com/api/driver/orders'));
+
     var headers = {
-      'Cookie': 'restaurant_session=NUZ9J67CmsrRkWPqW765evDXDBCttdgnKtygvzSR'
+
+    'Cookie': 'restaurant_session=$cookie'
     };
     var request = http.Request('GET', Uri.parse('http://restaurant.wettlanoneinc.com/api/driver/orders'));
 
@@ -276,25 +282,24 @@ class _DriverHomeScreenState extends State<DriverHomeScreen> {
                                                 ),
 
                                                 Row(
-                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  mainAxisAlignment: MainAxisAlignment.start,
                                                   children: [
-                                                    Text('Products : ${ordersList[index].ordersItems!.length}',
+                                                    Text('Order No : ${ordersList[index].order!.orderNo.toString()}',
                                                       style: TextStyle(color: Colors.black,
-                                                          fontSize: 14,fontWeight: FontWeight.w500),),
-
-                                                  ],
-                                                ),
-
+                                                          fontSize: 13,fontWeight: FontWeight.w600),),
+                                                  ],),
                                                 SizedBox(
                                                   height: size.height*0.01,
                                                 ),
+
                                                 Row(
-                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                   children: [
-                                                    Text('Order Number: ${ordersList[index].order!.orderNo.toString()}',
-                                                      style: TextStyle(color: Color(0xFF585858),
+                                                    Text('Items : ${ordersList[index].ordersItems!.length}',
+                                                      style: TextStyle(color: Colors.black,
                                                           fontSize: 12,fontWeight: FontWeight.w400),),
                                                   ],),
+
                                                 SizedBox(
                                                   height: size.height*0.01,
                                                 ),
@@ -447,23 +452,24 @@ class _DriverHomeScreenState extends State<DriverHomeScreen> {
                                                 ),
 
                                                 Row(
-                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  mainAxisAlignment: MainAxisAlignment.start,
                                                   children: [
-                                                    Text('Products : ${ordersList[index].ordersItems!.length}',
+                                                    Text('Order No : ${ordersList[index].order!.orderNo.toString()}',
                                                       style: TextStyle(color: Colors.black,
-                                                          fontSize: 14,fontWeight: FontWeight.w500),),
+                                                          fontSize: 13,fontWeight: FontWeight.w600),),
                                                   ],),
-
                                                 SizedBox(
                                                   height: size.height*0.01,
                                                 ),
+
                                                 Row(
-                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                   children: [
-                                                    Text('Order Number: ${ordersList[index].order!.orderNo.toString()}',
-                                                      style: TextStyle(color: Color(0xFF585858),
+                                                    Text('Items : ${ordersList[index].ordersItems!.length}',
+                                                      style: TextStyle(color: Colors.black,
                                                           fontSize: 12,fontWeight: FontWeight.w400),),
                                                   ],),
+
                                                 SizedBox(
                                                   height: size.height*0.01,
                                                 ),
@@ -626,42 +632,24 @@ class _DriverHomeScreenState extends State<DriverHomeScreen> {
                                                 ),
 
                                                 Row(
-                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  mainAxisAlignment: MainAxisAlignment.start,
                                                   children: [
-                                                    Text('Products : ${ordersList[index].ordersItems!.length}',
+                                                    Text('Order No : ${ordersList[index].order!.orderNo.toString()}',
                                                       style: TextStyle(color: Colors.black,
-                                                          fontSize: 14,fontWeight: FontWeight.w500),),
-
-                                                    // SizedBox(
-                                                    //   height: 20,
-                                                    //   width: 20,
-                                                    //   child: Image.asset('assets/images/cross.png', fit: BoxFit.scaleDown,
-                                                    //
-                                                    //     // height: 80,
-                                                    //     // width: 80,
-                                                    //   ),
-                                                    //),
+                                                          fontSize: 13,fontWeight: FontWeight.w600),),
                                                   ],),
-
                                                 SizedBox(
                                                   height: size.height*0.01,
                                                 ),
+
                                                 Row(
-                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                   children: [
-                                                    Text('Order Number: ${ordersList[index].order!.orderNo.toString()}',
-                                                      style: TextStyle(color: Color(0xFF585858),
+                                                    Text('Items : ${ordersList[index].ordersItems!.length}',
+                                                      style: TextStyle(color: Colors.black,
                                                           fontSize: 12,fontWeight: FontWeight.w400),),
-                                                    // SizedBox(
-                                                    //   height: 20,
-                                                    //   width: 20,
-                                                    //   child: Image.asset('assets/images/cross.png', fit: BoxFit.scaleDown,
-                                                    //
-                                                    //     // height: 80,
-                                                    //     // width: 80,
-                                                    //   ),
-                                                    //),
                                                   ],),
+
                                                 SizedBox(
                                                   height: size.height*0.01,
                                                 ),

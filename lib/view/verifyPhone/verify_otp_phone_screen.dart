@@ -37,7 +37,7 @@ class _VerifyOtpPhoneScreenState extends State<VerifyOtpPhoneScreen> {
 
 
    var headers = {
-     'Cookie': 'restaurant_session=KT28Ffy0PVvM7StpuPusqdpTivFmp0H7WwWvM4yp'
+     'Cookie': 'restaurant_session=$cookie'
    };
    var request = http.MultipartRequest('POST', Uri.parse('http://restaurant.wettlanoneinc.com/api/driver_otp_verified'));
    request.fields.addAll({

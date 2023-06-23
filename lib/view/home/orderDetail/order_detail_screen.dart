@@ -50,7 +50,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
   updateStatus(String status) async {
 
     var headers = {
-      'Cookie': 'restaurant_session=NUZ9J67CmsrRkWPqW765evDXDBCttdgnKtygvzSR'
+      'Cookie': 'restaurant_session=$cookie'
     };
     var request = http.MultipartRequest('POST', Uri.parse('http://restaurant.wettlanoneinc.com/api/driver/order_update_status/${widget.orderModel.order!.id}'));
     request.fields.addAll({
@@ -278,9 +278,9 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
 
                                     // git init
                                     // git add README.md
-                                    // git commit -m "first commit"
+                                    // git commit -m "second commit"
                                     // git branch -M main
-                                    // git remote add origin https://github.com/junaid4jd/honchos_restaurant_app.git
+                                    // git remote add origin https://github.com/junaid4jd/honchos_driver_app.git
                                     // git push -f origin main
 
 
@@ -289,9 +289,6 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                 ),
                               ),
                             ),
-
-
-
 
                           ],
                         ),
